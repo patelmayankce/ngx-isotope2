@@ -1,6 +1,22 @@
 {
   "name": "ngx-isotope2",
-  "version": "0.0.1",
+  "version": "0.0.3",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/patelmayankce/ngx-isotope2"
+  },
+  "author": {
+    "name": "Mayank Patel",
+    "email": "patelmayankce@gmail.com"
+  },
+  "keywords": [
+    "angular",
+    "angular7"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/patelmayankce/ngx-isotope2/issues"
+  },
   "peerDependencies": {
     "@angular/common": "^7.0.0",
     "@angular/core": "^7.0.0"

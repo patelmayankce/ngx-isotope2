@@ -1,27 +1,113 @@
-# Isotope
+# [Isotope](https://isotope.metafizzy.co/) module for Angular 7
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.0.3.
+[![npm version](https://badge.fury.io/js/angular2-isotope.svg)](https://www.npmjs.com/package/ngx-isotope2)
 
-## Development server
+> ngx-isotope is in development and **not ready for production use**.
+> Feel free to install and try it out, but depend on it at your own risk.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Table of contents
+1. [Getting Started](#getting-started)
+2. [Installation instructions](#installation-instructions)
+3. [Consuming the library](#consuming-the-library)
+4. [Configuration](#configuration)
 
-## Code scaffolding
+## Getting Started
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Installation instructions
 
-## Build
+To install this library, run:
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+```bash
+$ npm install ngx-isotope2 --save
+```
 
-## Running unit tests
+If you're using angular-cli add `isotope-layout`, `masonry-layout` and `imagesloaded` to your file configuration angular.json:
+```json
+"scripts": [
+  "../node_modules/masonry-layout/dist/masonry.pkgd.min.js",
+  "../node_modules/isotope-layout/dist/isotope.pkgd.min.js",
+  "../node_modules/imagesloaded/imagesloaded.pkgd.js"
+]
+```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Consuming the library
 
-## Running end-to-end tests
+Import `NgxIsotope2Module` from your Angular `AppModule`:
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+```typescript
+import { NgModule } from '@angular/core';
+import { AppComponent } from './app.component';
 
-## Further help
+// Import the library
+import { NgxIsotope2Module } from 'ngx-isotope2';
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+@NgModule({
+  declarations: [
+    AppComponent
+  ],
+  imports: [
+    NgxIsotope2Module
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
+})
+export class AppModule { }
+```
+
+Once your library is imported, you can use its components, directives and pipes in your Angular application:
+
+```typescript
+ @Component({
+   selector: 'my-component',
+   template: `
+     <isotope-grid>
+       <isotope-item *ngFor="let item of items">{{item.name}}</isotope-item>
+     </isotope>
+ })
+ class MyComponent {
+   items = [
+     {name: 'Item 1'},
+     {name: 'Item 2'},
+     {name: 'Item 3'},
+     {name: 'Item 4'},
+     {name: 'Item 5'},
+   ]
+ }
+ ```
+
+## Configuration
+
+### Options
+Read about Isotope options here: https://isotope.metafizzy.co/options.html
+
+The options attribute takes an object with the following properties:
+* itemSelector: string;
+* layoutMode: LayoutModes;
+* percentPosition: boolean;
+* stamp: string;
+
+#### Examples
+
+Inline object:
+```html
+<isotope-grid [options]="{ itemSelector: '.grid-item' }"></isotope-grid>
+```
+
+From parent component:
+```javascript
+import { IsotopeOptions } from 'ngx-isotope';
+
+public myOptions: IsotopeOptions = {
+  itemSelector: '.grid-item'
+};
+```
+```html
+<isotope-grid [options]="myOptions"></isotope-grid>
+```
+## Developers
+
+[Mayank Patel](mailto:patelmayankce@gmail.com)
+
+## License
+
+MIT © 

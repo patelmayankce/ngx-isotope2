@@ -1,6 +1,22 @@
 {
   "name": "isotope",
-  "version": "0.0.0",
+  "version": "0.0.3",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/patelmayankce/ngx-isotope2"
+  },
+  "author": {
+    "name": "Mayank Patel",
+    "email": "patelmayankce@gmail.com"
+  },
+  "keywords": [
+    "angular",
+    "angular7"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/patelmayankce/ngx-isotope2/issues"
+  },
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
