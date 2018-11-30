@@ -3,7 +3,7 @@ import { AfterViewInit, Component, ElementRef, OnInit } from '@angular/core';
 import { IsotopeGridComponent } from '../isotope-grid/isotope-grid.component';
 
 @Component({
-  selector: 'isotope-isotope-item',
+  selector: 'isotope-item',
   templateUrl: './isotope-item.component.html',
   styleUrls: ['./isotope-item.component.css']
 })

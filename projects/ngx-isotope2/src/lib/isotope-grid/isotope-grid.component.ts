@@ -9,7 +9,7 @@ declare var Isotope: any;
 declare var imagesLoaded: any;
 
 @Component({
-  selector: 'isotope-isotope-grid',
+  selector: 'isotope-grid',
   templateUrl: './isotope-grid.component.html',
   styleUrls: ['./isotope-grid.component.css']
 })
