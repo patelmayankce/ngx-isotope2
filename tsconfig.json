@@ -16,6 +16,14 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "ngx-isotope2": [
+        "dist/ngx-isotope2"
+      ],
+      "ngx-isotope2/*": [
+        "dist/ngx-isotope2/*"
+      ]
+    }
   }
 }

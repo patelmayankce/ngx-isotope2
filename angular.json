@@ -133,6 +133,41 @@
           }
         }
       }
+    },
+    "ngx-isotope2": {
+      "root": "projects/ngx-isotope2",
+      "sourceRoot": "projects/ngx-isotope2/src",
+      "projectType": "library",
+      "prefix": "isotope",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/ngx-isotope2/tsconfig.lib.json",
+            "project": "projects/ngx-isotope2/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ngx-isotope2/src/test.ts",
+            "tsConfig": "projects/ngx-isotope2/tsconfig.spec.json",
+            "karmaConfig": "projects/ngx-isotope2/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/ngx-isotope2/tsconfig.lib.json",
+              "projects/ngx-isotope2/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "defaultProject": "isotope"
